@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSSlnDependencies", "VSSlnDependencies.csproj", "{D2FDDB09-33C0-4D2D-92F2-3D17D0A64827}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = VSSlnDependencies.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2FDDB09-33C0-4D2D-92F2-3D17D0A64827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2FDDB09-33C0-4D2D-92F2-3D17D0A64827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2FDDB09-33C0-4D2D-92F2-3D17D0A64827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2FDDB09-33C0-4D2D-92F2-3D17D0A64827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
