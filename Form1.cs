@@ -123,9 +123,16 @@ namespace VSSlnDependencies
           sr = File.OpenText(pi.fileInfo.FullName);
           //System.Diagnostics.Debug.Assert(!pi.fileInfo.FullName.Contains("ROITreeCtrl"), "ROITreeCtrl");
           bool inReference = false;
+          bool inAdditionalDependencies = false;
+          string mergedLines = "";
           while (sr.Peek() >= 0)
           {
             string line = sr.ReadLine();
+            if (inAdditionalDependencies)
+            {
+              mergedLines = mergedLines + line;
+              line = mergedLines;
+            }
             if (inReference)
             {
               if (line.Contains("<\\Reference "))
@@ -160,6 +167,7 @@ namespace VSSlnDependencies
               {
                 if (line.Contains("</AdditionalDependencies>"))
                 {
+                  inAdditionalDependencies = false;
                   string[] deps = line.Substring(line.IndexOf(">") + 1, line.IndexOf("</") - line.IndexOf(">") - 1).Split(';');
                   foreach (string dep in deps)
                   {
@@ -177,7 +185,8 @@ namespace VSSlnDependencies
                 }
                 else
                 {
-                  System.Diagnostics.Debug.Assert(false, "<AdditionalDependencies>");
+                  inAdditionalDependencies = true;
+                  mergedLines = line;
                 }
               }
             }
