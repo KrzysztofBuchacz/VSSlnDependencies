@@ -41,3 +41,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+obj/Debug/
+bin/Debug/
+obj/Release/
+bin/Release/VSSlnDependencies.vshost.exe
+bin/Release/VSSlnDependencies.pdb
+VSSlnDependencies.v11.suo
+bin/Release/VSSlnDependencies.vshost.exe.config
+bin/Release/VSSlnDependencies.vshost.exe.manifest
+bin/Release/VSSlnDependencies.exe.config

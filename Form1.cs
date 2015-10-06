@@ -121,6 +121,7 @@ namespace VSSlnDependencies
         foreach (ProjectInfo pi in projects.Values)
         {
           sr = File.OpenText(pi.fileInfo.FullName);
+          //System.Diagnostics.Debug.Assert(!pi.fileInfo.FullName.Contains("ROITreeCtrl"), "ROITreeCtrl");
           bool inReference = false;
           while (sr.Peek() >= 0)
           {
@@ -164,6 +165,7 @@ namespace VSSlnDependencies
                   {
                     string name = dep.Split(new char[] { '\\', '/' }).Last();
                     name = name.ToLower();
+                    name = name.Replace("%(additionaldependencies)", "");
                     name = name.Replace("$(outdir)", "");
                     name = name.Replace(".lib", "");
                     KeyValuePair<string, ProjectInfo> found = projects.Where(p => p.Value.binName == name).FirstOrDefault();
@@ -250,7 +252,6 @@ namespace VSSlnDependencies
           }
           else
           {
-            // TODO
             System.Diagnostics.Debug.Assert(false, "</OutputFile>");
           }
         }
