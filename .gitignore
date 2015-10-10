@@ -50,3 +50,4 @@ VSSlnDependencies.v11.suo
 bin/Release/VSSlnDependencies.vshost.exe.config
 bin/Release/VSSlnDependencies.vshost.exe.manifest
 bin/Release/VSSlnDependencies.exe.config
+*.suo
